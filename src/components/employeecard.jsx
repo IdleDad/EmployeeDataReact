@@ -5,7 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+
 import SpaIcon from '@mui/icons-material/Spa';
+
 
 export default function MediaCard() {
   return (
@@ -16,7 +18,6 @@ export default function MediaCard() {
         title="green iguana"
       />
       <CardContent>
-        
         <Typography gutterBottom variant="h5" component="div">
           Lizard
         </Typography>
