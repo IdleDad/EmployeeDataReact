@@ -20,7 +20,7 @@ export default function MediaCard() {
       <Box sx={{ paddingTop:2 }}>
       <CardMedia
         sx={{ height: 300,width:300, backgroundSize:"contain", margin:"auto"   }}
-        image="profile2.png"
+        image="/EmployeeDataReact/profile2.png"
         title="profile image"
       />
       </Box>
