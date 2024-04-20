@@ -12,40 +12,46 @@ import Stack from '@mui/material/Stack';
 import SpaIcon from '@mui/icons-material/Spa';
 
 
-export default function MediaCard() {
+export default function MediaCard({ data }) {
+  /*console.log(data); */
   return (
+<>
+          {data.map((item,index) => (
+<Card sx={{ maxWidth: 345,  margin:5, padding:2 }}>
 
-        <Card sx={{ maxWidth: 345,  margin:5, padding:2 }}>
+<Box sx={{ paddingTop:2 }}>
+<CardMedia
+  sx={{ height: 300,width:300, backgroundSize:"contain", margin:"auto"   }}
+  image={`/EmployeeDataReact/${item.image}`}
+  title="profile image"
+/>
+</Box>
 
-      <Box sx={{ paddingTop:2 }}>
-      <CardMedia
-        sx={{ height: 300,width:300, backgroundSize:"contain", margin:"auto"   }}
-        image="/EmployeeDataReact/profile2.png"
-        title="profile image"
-      />
-      </Box>
+<CardContent>
+  <SpaIcon />
+  <Typography gutterBottom variant="h5" component="div">
+    {item.firstName} {item.lastName}
+  </Typography>
+  <Typography variant="body2" color="text.secondary">
+  Department: {item.department}
+  </Typography>
+  <Typography variant="body2" color="text.secondary">
+  Position: {item.position}
+  </Typography>
+  <Stack direction="row" 
+  flexWrap="wrap" spacing={1} sx={{marginTop:2, justifyContent:"center"}}>
+    {item.skills.map((skill, skillIndex)=>(
+     < Chip sx={{marginTop: 10}} key={skillIndex} label={skill}/>
+    ))}
 
-      <CardContent>
-        <SpaIcon />
-        <Typography gutterBottom variant="h5" component="div">
-          Rupa Samyukta
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        Department: UX/UI Design
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        Position: UX Researcher
-        </Typography>
-        <Stack direction="row" spacing={1} sx={{marginTop:2, justifyContent:"center"}}>
-      <Chip label="Research" />
-      <Chip label="Figma" />
-      <Chip label="Sketch" />
-    </Stack>
-    <Stack direction="row" spacing={2} sx={{marginTop:1, justifyContent:"center"}}>
-      <Chip label="Active" variant="outlined"/>
-      <Chip label="Hours:20" variant="outlined" />
-    </Stack>
-      </CardContent>
-    </Card>
+</Stack>
+<Stack direction="row" spacing={2} sx={{marginTop:1, justifyContent:"center"}}>
+<Chip label={item.onLeave? "Inactive":"Active"} variant="outlined"/>
+<Chip label={`Hours: ${item.hoursLoggedThisWeek}`} variant="outlined" />
+</Stack>
+</CardContent>
+</Card>
+          ))}
+        </>
   );
 }
