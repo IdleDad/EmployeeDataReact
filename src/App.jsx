@@ -5,15 +5,17 @@ import MediaCard from'./components/employeecard.jsx'
 import './App.css'
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack';
 
 function App() { 
   const [onLeave, setLeave] = useState(true)
   console.log(onLeave)
   return (
     <Container fixed>
-  
+  <Stack spacing={2} direction="row">
       <Button variant="contained">Active</Button>
       <Button variant="outlined">On Leave</Button>
+      </Stack>
     <MediaCard data= {data}/>
   </Container>
     
