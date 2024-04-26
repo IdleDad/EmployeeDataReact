@@ -8,7 +8,6 @@ import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import Typography from '@mui/material/Typography';
-import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
@@ -31,9 +30,8 @@ function App() {
 </Typography>
 
       <FormControlLabel control={<Switch {...label} onClick={handleToggle} />} label="On Leave" />
-   
   <Stack spacing={2} direction="row">
-  
+
       <Button variant="contained">Active</Button>
       <Button variant="outlined">On Leave</Button>
       </Stack>

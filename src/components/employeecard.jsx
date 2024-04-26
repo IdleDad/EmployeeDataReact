@@ -36,15 +36,14 @@ export default function MediaCard({ data }) {
   <Typography variant="body2" color="text.secondary">
   Department: {item.department}
   </Typography>
-  <Typography variant="body2" color="text.secondary">
+  /*<Typography variant="body2" color="text.secondary">
   Position: {item.position}
   </Typography>
-  <Stack direction="row" 
-  flexWrap="wrap" spacing={1} sx={{marginTop:2, justifyContent:"center"}}>
+  
+  <Stack>
     {item.skills.map((skill, skillIndex)=>(
-     < Chip sx={{marginTop: 10}} key={skillIndex} label={skill}/>
+     < Chip variant ="outlined" sx={{marginTop: "10px"}} key={skillIndex} label={skill} />
     ))}
-
 </Stack>
 <Stack direction="row" spacing={2} sx={{marginTop:1, justifyContent:"center"}}>
 <Chip label={item.onLeave? "Inactive":"Active"} variant="outlined"/>
