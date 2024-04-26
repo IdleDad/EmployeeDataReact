@@ -43,8 +43,8 @@ const data = [{
   {
     "image": "profile4.png",
     "id": "E1005",
-    "firstName": "Ankita",
-    "lastName": "Borawake",
+    "firstName": "Kayden",
+    "lastName": "Maguire",
     "email": "emily.green@example.com",
     "department": "Human Resources",
     "position": "HR Manager",
